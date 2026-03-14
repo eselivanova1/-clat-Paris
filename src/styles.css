@@ -1,0 +1,342 @@
+@font-face {
+  font-family: 'Savoye LET';
+  src: local('Savoye LET'), local('Savoye LET Plain');
+}
+
+:root {
+  --bg: #f5f0ea;
+  --paper: #fbf8f4;
+  --ink: #1a1715;
+  --soft-ink: #5d5550;
+  --line: #ddd1c6;
+  --container: 1440px;
+  --side-pad: 120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.container {
+  max-width: var(--container);
+  padding-inline: var(--side-pad);
+  margin-inline: auto;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--soft-ink);
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 42px;
+  padding-bottom: 24px;
+}
+
+.logo {
+  font-family: 'Savoye LET', 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  color: inherit;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.site-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.site-nav a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Home */
+.home-page {
+  padding-bottom: 100px;
+}
+
+.home-hero {
+  padding-top: 56px;
+}
+
+.home-hero h1 {
+  margin-top: 12px;
+  font-size: clamp(2.4rem, 6.5vw, 5.8rem);
+  line-height: 1.03;
+  max-width: 12ch;
+}
+
+.home-lead {
+  margin: 22px 0 0;
+  max-width: 64ch;
+  color: var(--soft-ink);
+  line-height: 1.75;
+}
+
+.hero-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 13px 26px;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+}
+
+.button.ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.home-intro {
+  padding-top: 84px;
+}
+
+.home-intro h2,
+.home-grid-section h2 {
+  font-size: clamp(1.8rem, 3.3vw, 2.8rem);
+}
+
+.home-intro p {
+  margin: 16px 0 0;
+  max-width: 72ch;
+  color: var(--soft-ink);
+  line-height: 1.85;
+}
+
+.home-grid-section {
+  padding-top: 72px;
+}
+
+.home-houses-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.house-tile {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 14px;
+}
+
+.house-tile-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 12px;
+}
+
+.house-tile h3 {
+  font-size: 1.35rem;
+}
+
+.house-city {
+  margin: 8px 0 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--soft-ink);
+}
+
+.house-tile p {
+  margin: 8px 0 0;
+  color: var(--soft-ink);
+  line-height: 1.6;
+}
+
+.home-quote {
+  padding-top: 78px;
+}
+
+.home-quote blockquote {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3.6vw, 3rem);
+  line-height: 1.2;
+  max-width: 26ch;
+}
+
+.home-quote cite {
+  display: block;
+  margin-top: 14px;
+  color: var(--soft-ink);
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* House page */
+.house-page {
+  padding-bottom: 100px;
+}
+
+.house-hero {
+  padding-top: 42px;
+}
+
+.house-hero-image {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  border: 1px solid var(--line);
+}
+
+.house-meta {
+  display: grid;
+  gap: 12px;
+  padding-top: 26px;
+}
+
+.house-meta h1 {
+  font-size: clamp(2.3rem, 6vw, 5rem);
+  line-height: 1.05;
+}
+
+.house-founded {
+  margin: 0;
+  color: var(--soft-ink);
+  font-size: 1.1rem;
+}
+
+.house-history {
+  padding-top: 82px;
+}
+
+.house-history h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.house-history-copy {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+  max-width: 76ch;
+}
+
+.house-history-copy p {
+  margin: 0;
+  color: var(--soft-ink);
+  line-height: 1.8;
+}
+
+.house-gallery-section {
+  padding-top: 72px;
+}
+
+.house-gallery-section h3 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.house-gallery-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.fashion-week .house-gallery-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.house-gallery-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 14px;
+}
+
+.house-gallery-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin-bottom: 14px;
+}
+
+.house-gallery-card h4 {
+  font-size: 1.25rem;
+}
+
+.house-gallery-card p {
+  margin: 10px 0 0;
+  color: var(--soft-ink);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 24px;
+  padding-bottom: 34px;
+  color: var(--soft-ink);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --side-pad: 40px;
+  }
+
+  .home-houses-grid,
+  .house-gallery-grid,
+  .fashion-week .house-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --side-pad: 20px;
+  }
+
+  .site-header,
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
