@@ -40,11 +40,27 @@ body {
   min-height: 100vh;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--soft-ink);
+}
+
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 42px;
+  padding-bottom: 24px;
 }
 
 .logo {
@@ -63,109 +79,103 @@ body {
 .site-nav a {
   color: inherit;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.hero {
-  padding-top: 110px;
-  padding-bottom: 80px;
-}
-
-.eyebrow {
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-size: 0.78rem;
-  color: var(--soft-ink);
-}
-
-h1,
-h2,
-h3 {
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-}
-
-.hero h1 {
-  margin-top: 14px;
-  font-size: clamp(2.2rem, 6.2vw, 5.5rem);
-  max-width: 16ch;
-  line-height: 1.05;
-}
-
-.lead {
-  margin-top: 24px;
-  max-width: 60ch;
-  color: var(--soft-ink);
-  line-height: 1.7;
-}
-
-.hero-actions {
-  margin-top: 34px;
-  display: flex;
-  gap: 14px;
-}
-
-button {
-  background: var(--ink);
-  color: var(--paper);
-  border: 0;
-  border-radius: 999px;
-  font: inherit;
-  padding: 13px 28px;
-  cursor: pointer;
-}
-
-button.ghost {
-  background: transparent;
-  color: var(--ink);
-  border: 1px solid var(--ink);
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+.house-page {
   padding-bottom: 100px;
 }
 
-.card {
+.house-hero {
+  padding-top: 42px;
+}
+
+.house-hero-image {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  border: 1px solid var(--line);
+}
+
+.house-meta {
+  display: grid;
+  gap: 12px;
+  padding-top: 26px;
+}
+
+.house-meta h1 {
+  font-size: clamp(2.3rem, 6vw, 5rem);
+  line-height: 1.05;
+}
+
+.house-founded {
+  margin: 0;
+  color: var(--soft-ink);
+  font-size: 1.1rem;
+}
+
+.house-history {
+  padding-top: 82px;
+}
+
+.house-history h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.house-history-copy {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+  max-width: 76ch;
+}
+
+.house-history-copy p {
+  margin: 0;
+  color: var(--soft-ink);
+  line-height: 1.8;
+}
+
+.house-gallery-section {
+  padding-top: 72px;
+}
+
+.house-gallery-section h3 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.house-gallery-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.fashion-week .house-gallery-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.house-gallery-card {
   background: var(--paper);
   border: 1px solid var(--line);
   padding: 14px;
 }
 
-.card-visual {
+.house-gallery-image {
+  width: 100%;
   aspect-ratio: 4 / 5;
-  background: linear-gradient(145deg, #d9cec3, #b39f8d);
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
-.card h3 {
-  font-size: 1.3rem;
+.house-gallery-card h4 {
+  font-size: 1.25rem;
 }
 
-.card p {
+.house-gallery-card p {
+  margin: 10px 0 0;
   color: var(--soft-ink);
-  line-height: 1.6;
   font-size: 0.95rem;
-}
-
-.about {
-  padding-top: 130px;
-  padding-bottom: 160px;
-}
-
-.about h2 {
-  font-size: clamp(2rem, 5vw, 4rem);
-}
-
-.about p {
-  max-width: 70ch;
-  line-height: 1.8;
-  color: var(--soft-ink);
-  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .site-footer {
@@ -183,7 +193,8 @@ button.ghost {
     --side-pad: 40px;
   }
 
-  .gallery {
+  .house-gallery-grid,
+  .fashion-week .house-gallery-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -194,8 +205,7 @@ button.ghost {
   }
 
   .site-header,
-  .site-footer,
-  .hero-actions {
+  .site-footer {
     flex-direction: column;
     align-items: flex-start;
   }
